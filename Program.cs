@@ -4,9 +4,14 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        //Folders.Print();
-        Song song = new Song();
-        song.Print();
+        /* Folders.Print(); */
+
+        /*
+         * Song song = new Song();
+         * song.Print();
+         */
+
+        BinarySearchTree.Print();
     }
 
 
