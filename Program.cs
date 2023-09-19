@@ -11,7 +11,9 @@ internal class Program
          * song.Print();
          */
 
-        BinarySearchTree.Print();
+        /* BinarySearchTree.Print(); */
+
+        QuadraticEquation.Print();
     }
 
 
