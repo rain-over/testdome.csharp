@@ -24,33 +24,46 @@
 
         public bool IsInRepeatingPlaylist()
         {
-
             Song slow = this;
             Song fast = this.NextSong;
 
             while (slow != fast)
             {
-                Console.WriteLine($"slow: {slow.name}, fast: {fast.name}");
                 if (fast == null || fast.NextSong == null) return false;
 
                 slow = slow.NextSong;
                 fast = fast.NextSong.NextSong;
-
             }
 
             return true;
-
         }
 
         public void Print()
         {
-            Song first = new Song("Hello");
-            Song second = new Song("Eye of the tiger");
+            //Song first = new Song("Hello");
+            //Song second = new Song("Eye of the tiger");
 
-            first.NextSong = second;
-            second.NextSong = first;
+            int count = 100;
 
-            Console.WriteLine(first.IsInRepeatingPlaylist());
+            List<Song> list = new List<Song>();
+
+
+            for (int i = 0; i < count; i++)
+            {
+                list.Add(new Song($"Song {i}"));
+            }
+
+            for (int i = 0; i < count - 1; i++)
+            {
+                list[i].NextSong = list[i + 1];
+            }
+            list[count - 1].NextSong = list[0];
+
+            //first.NextSong = second;
+            //second.NextSong = first;
+
+
+            Console.WriteLine(list[0].IsInRepeatingPlaylist());
         }
     }
 }
