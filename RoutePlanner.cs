@@ -58,6 +58,8 @@ internal class RoutePlanner
     public static bool RouteExists(int fromRow, int fromColumn, int toRow, int toColumn,
                                  bool[,] mapMatrix, bool[,] visited)
     {
+        Console.WriteLine($"[{fromRow}, {fromColumn}]");
+
         if (fromRow == toRow && fromColumn == toColumn) return true;
 
         visited[fromRow, fromColumn] = true;
@@ -65,8 +67,10 @@ internal class RoutePlanner
 
         for (int i = 0; i < directions.Length; i++)
         {
+
             int newFromRow = fromRow + directions[i][0];
             int newFromColumn = fromColumn + directions[i][1];
+
 
             if (IsValidMove(newFromRow, newFromColumn, mapMatrix) && !visited[newFromRow, newFromColumn])
             {
@@ -79,6 +83,7 @@ internal class RoutePlanner
         }
 
 
+
         return false;
     }
 
@@ -86,13 +91,41 @@ internal class RoutePlanner
     public static string RouteExists()
     {
         bool[,] mapMatrix = {
+            {true, false, true},
             {true, true, true},
+            {false, false, true},
+            {true, false, true},
             {true, true, true},
-            {true, true, true}
+            {true, false, false},
+            {true, true, true},
+            {true, false, true},
+            {true, true, true},
+            {true, false, true},
+            {true, true, true},
+            {true, false, true},
+            {true, true, true},
+            {true, false, true},
+            {true, true, true},
+            {true, false, true},
+            {true, true, true},
+            {true, false, true},
+            {true, true, true},
+            {true, false, true},
+            {true, true, true},
+            {false, false, true},
+            {false, false, true},
+            {false, false, true},
+            {false, false, true},
+            {false, false, true},
+            {false, false, true},
+            {false, false, true},
+            {false, false, true},
+            {false, false, true},
+
         };
 
 
-        string exist = RouteExists(1, 1, 0, 0, mapMatrix) ? "exists." : "does not exist.";
+        string exist = RouteExists(0, 0, 29, 2, mapMatrix) ? "exists." : "does not exist.";
         return $"Route {exist}";
     }
 }
