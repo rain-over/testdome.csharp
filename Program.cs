@@ -13,7 +13,9 @@ internal class Program
 
         /* BinarySearchTree.Print(); */
 
-        QuadraticEquation.Print();
+        /* QuadraticEquation.Print(); */
+
+        Console.WriteLine(RoutePlanner.RouteExists());
     }
 
 
