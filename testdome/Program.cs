@@ -23,7 +23,9 @@ internal class Program
 
         //Account.CheckAccount();
 
-        SortedSearch.CountNumbers();
+        //SortedSearch.CountNumbers();
+
+        UserInput.Input();
 
     }
 
