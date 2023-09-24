@@ -15,7 +15,10 @@ internal class Program
 
         /* QuadraticEquation.Print(); */
 
-        Console.WriteLine(RoutePlanner.RouteExists());
+        //Console.WriteLine(RoutePlanner.RouteExists());
+
+        TwoSum.FindTwoSum();
+
     }
 
 
