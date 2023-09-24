@@ -25,7 +25,9 @@ internal class Program
 
         //SortedSearch.CountNumbers();
 
-        UserInput.Input();
+        //UserInput.Input();
+
+        MalwareAnalysis.Simulate();
 
     }
 
