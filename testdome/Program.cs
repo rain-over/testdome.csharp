@@ -21,7 +21,9 @@ internal class Program
 
         //TrainComposition.RunTrain();
 
-        Account.CheckAccount();
+        //Account.CheckAccount();
+
+        SortedSearch.CountNumbers();
 
     }
 
