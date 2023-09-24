@@ -17,7 +17,9 @@ internal class Program
 
         //Console.WriteLine(RoutePlanner.RouteExists());
 
-        TwoSum.FindTwoSum();
+        //TwoSum.FindTwoSum();
+
+        TrainComposition.RunTrain();
 
     }
 
