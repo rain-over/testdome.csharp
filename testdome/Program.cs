@@ -19,7 +19,9 @@ internal class Program
 
         //TwoSum.FindTwoSum();
 
-        TrainComposition.RunTrain();
+        //TrainComposition.RunTrain();
+
+        Account.CheckAccount();
 
     }
 

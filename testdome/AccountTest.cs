@@ -4,12 +4,12 @@
  * 
  * 
  */
-public class Account
+public class AccountTest
 {
     public double Balance { get; private set; }
     public double OverdraftLimit { get; private set; }
 
-    public Account(double overdraftLimit)
+    public AccountTest(double overdraftLimit)
     {
         this.OverdraftLimit = overdraftLimit > 0 ? overdraftLimit : 0;
         this.Balance = 0;
